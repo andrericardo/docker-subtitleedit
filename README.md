@@ -1,5 +1,8 @@
 # Run Subtitle Edit in docker container
 
+**If you just want a CLI version there is a CLI version in here:**
+https://github.com/SubtitleEdit/subtitleedit-cli
+
 ## Run Subtitle Edit command line
 
 ```sh
@@ -32,14 +35,12 @@ docker run --rm \
     -it andrepricardo/subtitleedit
 ```
 
--e DISPLAY=docker.for.mac.host.internal:0
-
 #### OSX workaround X11
 
 First setup OSX to forward X11
 https://gist.github.com/sorny/969fe55d85c9b0035b0109a31cbcb088
 
-Run with
+Then run with `-e DISPLAY=docker.for.mac.host.internal:0`
 
 ```sh
 docker run --rm \
